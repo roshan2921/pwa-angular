@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/router": "~13.1.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.74.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -34,6 +36,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "sw-precache-webpack-plugin": "^1.0.0",
     "typescript": "~4.5.2"
   }
 }
